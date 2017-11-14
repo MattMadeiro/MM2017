@@ -1,0 +1,17 @@
+{
+  "name": "MM2017",
+  "version": "1.0.0",
+  "description": "A revamp of mattmadeiro.com built with RiotJS and Tachyons.",
+  "dependencies": {
+    "micro-list": "latest"
+  },
+  "scripts": {
+    "start": "php -S localhost:9000",
+    "minify-js": "uglifyjs js/app.js -m -o js/build/app.min.js && uglifyjs js/lib.js -m -o js/build/lib.min.js && uglifyjs js/MM2017.js -m -o js/build/MM2017.min.js",
+    "minify-riot": "for f in js/tags/*.tag; do (cat $f; echo '') >> js/MM2017.tag; done",
+    "compile": "npm run minify-riot && riot js/MM2017.tag",
+    "combine": "awk 'FNR==1{print \"\"}{print}' js/build/lib.min.js js/build/MM2017.min.js js/build/app.min.js > js/build/MadeirOS.min.js",
+    "prebuild": "rm -f js/MM2017.tag js/MM2017.js",
+    "build": "npm run compile && npm run minify-js && npm run combine"
+  }
+}

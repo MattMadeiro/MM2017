@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" class='bg-mustard'>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>MadeirOS</title>
+
+        <!-- Tachyons <3 -->
+        <link rel="stylesheet" href="css/tachyons.min.css"/>
+
+        <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+            <symbol id="icon-arrow-right" viewBox="0 0 32 32">
+                <title>arrow-right</title>
+                <path class="path1" d="M18.667 5.333q0.563 0 0.948 0.385l9.333 9.333q0.385 0.385 0.385 0.948t-0.385 0.948l-9.333 9.333q-0.385 0.385-0.948 0.385-0.573 0-0.953-0.38t-0.38-0.953q0-0.563 0.385-0.948l7.063-7.052h-20.781q-0.552 0-0.943-0.391t-0.391-0.943 0.391-0.943 0.943-0.391h20.781l-7.063-7.052q-0.385-0.385-0.385-0.948 0-0.573 0.38-0.953t0.953-0.38z"></path>
+            </symbol>
+            <symbol id="icon-arrow-left" viewBox="0 0 32 32">
+                <title>arrow-left</title>
+                <path class="path1" d="M13.333 5.333q0.552 0 0.943 0.391t0.391 0.943q0 0.563-0.396 0.948l-7.052 7.052h20.781q0.552 0 0.943 0.391t0.391 0.943-0.391 0.943-0.943 0.391h-20.781l7.052 7.052q0.396 0.385 0.396 0.948 0 0.552-0.391 0.943t-0.943 0.391q-0.563 0-0.948-0.385l-9.333-9.333q-0.385-0.406-0.385-0.948t0.385-0.948l9.333-9.333q0.396-0.385 0.948-0.385z"></path>
+            </symbol>
+            <symbol id="icon-cross" viewBox="0 0 32 32">
+                <title>cross</title>
+
+                <path class="path1" d="M25.333 5.333q0.573 0 0.953 0.38t0.38 0.953q0 0.563-0.385 0.948l-8.396 8.385 8.396 8.385q0.385 0.385 0.385 0.948 0 0.573-0.38 0.953t-0.953 0.38q-0.563 0-0.948-0.385l-8.385-8.396-8.385 8.396q-0.385 0.385-0.948 0.385-0.573 0-0.953-0.38t-0.38-0.953q0-0.563 0.385-0.948l8.396-8.385-8.396-8.385q-0.385-0.385-0.385-0.948 0-0.573 0.38-0.953t0.953-0.38q0.563 0 0.948 0.385l8.385 8.396 8.385-8.396q0.385-0.385 0.948-0.385z"></path>
+            </symbol>
+            <symbol id="icon-facebook" viewBox="0 0 32 32">
+                <title>facebook</title>
+                <path class="path1" d="M29 0h-26c-1.65 0-3 1.35-3 3v26c0 1.65 1.35 3 3 3h13v-14h-4v-4h4v-2c0-3.306 2.694-6 6-6h4v4h-4c-1.1 0-2 0.9-2 2v2h6l-1 4h-5v14h9c1.65 0 3-1.35 3-3v-26c0-1.65-1.35-3-3-3z"></path>
+            </symbol>
+            <symbol id="icon-instagram" viewBox="0 0 32 32">
+                <title>instagram</title>
+                <path class="path1" d="M16 2.881c4.275 0 4.781 0.019 6.462 0.094 1.563 0.069 2.406 0.331 2.969 0.55 0.744 0.288 1.281 0.638 1.837 1.194 0.563 0.563 0.906 1.094 1.2 1.838 0.219 0.563 0.481 1.412 0.55 2.969 0.075 1.688 0.094 2.194 0.094 6.463s-0.019 4.781-0.094 6.463c-0.069 1.563-0.331 2.406-0.55 2.969-0.288 0.744-0.637 1.281-1.194 1.837-0.563 0.563-1.094 0.906-1.837 1.2-0.563 0.219-1.413 0.481-2.969 0.55-1.688 0.075-2.194 0.094-6.463 0.094s-4.781-0.019-6.463-0.094c-1.563-0.069-2.406-0.331-2.969-0.55-0.744-0.288-1.281-0.637-1.838-1.194-0.563-0.563-0.906-1.094-1.2-1.837-0.219-0.563-0.481-1.413-0.55-2.969-0.075-1.688-0.094-2.194-0.094-6.463s0.019-4.781 0.094-6.463c0.069-1.563 0.331-2.406 0.55-2.969 0.288-0.744 0.638-1.281 1.194-1.838 0.563-0.563 1.094-0.906 1.838-1.2 0.563-0.219 1.412-0.481 2.969-0.55 1.681-0.075 2.188-0.094 6.463-0.094zM16 0c-4.344 0-4.887 0.019-6.594 0.094-1.7 0.075-2.869 0.35-3.881 0.744-1.056 0.412-1.95 0.956-2.837 1.85-0.894 0.888-1.438 1.781-1.85 2.831-0.394 1.019-0.669 2.181-0.744 3.881-0.075 1.713-0.094 2.256-0.094 6.6s0.019 4.887 0.094 6.594c0.075 1.7 0.35 2.869 0.744 3.881 0.413 1.056 0.956 1.95 1.85 2.837 0.887 0.887 1.781 1.438 2.831 1.844 1.019 0.394 2.181 0.669 3.881 0.744 1.706 0.075 2.25 0.094 6.594 0.094s4.888-0.019 6.594-0.094c1.7-0.075 2.869-0.35 3.881-0.744 1.050-0.406 1.944-0.956 2.831-1.844s1.438-1.781 1.844-2.831c0.394-1.019 0.669-2.181 0.744-3.881 0.075-1.706 0.094-2.25 0.094-6.594s-0.019-4.887-0.094-6.594c-0.075-1.7-0.35-2.869-0.744-3.881-0.394-1.063-0.938-1.956-1.831-2.844-0.887-0.887-1.781-1.438-2.831-1.844-1.019-0.394-2.181-0.669-3.881-0.744-1.712-0.081-2.256-0.1-6.6-0.1v0z"></path>
+                <path class="path2" d="M16 7.781c-4.537 0-8.219 3.681-8.219 8.219s3.681 8.219 8.219 8.219 8.219-3.681 8.219-8.219c0-4.537-3.681-8.219-8.219-8.219zM16 21.331c-2.944 0-5.331-2.387-5.331-5.331s2.387-5.331 5.331-5.331c2.944 0 5.331 2.387 5.331 5.331s-2.387 5.331-5.331 5.331z"></path>
+                <path class="path3" d="M26.462 7.456c0 1.060-0.859 1.919-1.919 1.919s-1.919-0.859-1.919-1.919c0-1.060 0.859-1.919 1.919-1.919s1.919 0.859 1.919 1.919z"></path>
+            </symbol>
+            <symbol id="icon-twitter" viewBox="0 0 32 32">
+                <title>twitter</title>
+                <path class="path1" d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z"></path>
+            </symbol>
+            </defs>
+        </svg>
+
+        <style>
+
+            .icon {
+              width: 1em;
+              height: 1em;
+              stroke-width: 0;
+              stroke: currentColor;
+              fill: currentColor;
+            }
+            .hover-invert:hover {
+                background-color: black;
+                color: white;
+            }
+            .hover-invert:hover * {
+                color: white;
+            }
+
+            html {
+                height: 100%;
+                box-sizing: border-box;
+            }
+            *, *:before, *:after {
+              box-sizing: inherit;
+            }
+            body {
+              font-family: -apple-system, BlinkMacSystemFont,
+                           'avenir next', avenir,
+                           helvetica, 'helvetica neue',
+                           ubuntu,
+                           roboto, noto,
+                           'segoe ui', arial,
+                           sans-serif;
+            }
+            .bg-mustard {
+                background-color: #F5D04C;
+                background: url('images/background-o.png');
+            }
+            .bg-dijon {
+                background: #a48800;
+                background-image: linear-gradient(to right, #ad9319, #a48800);
+                /*background-color: #222;*/
+            }
+            .link:hover {
+                color: #000;
+            }
+            .dijon {
+                color: #AD9335;
+            }
+            .cursor-move {
+                cursor: move;
+            }
+            .dragging {
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -o-user-select: none;
+                user-select: none;
+            }
+            .horizontal-flow {
+                -webkit-overflow-scrolling: touch;
+                -ms-overflow-style: -ms-autohiding-scrollbar;
+            }
+
+            /* Just...don't ask. */
+            .unicorn.animate {
+                -webkit-animation: colorRotate 6s linear 0s infinite;
+                -moz-animation: colorRotate 6s linear 0s infinite;
+                -o-animation: colorRotate 6s linear 0s infinite;
+                animation: colorRotate 6s linear 0s infinite;
+
+                -webkit-animation-play-state: running;
+                -moz-animation-play-state: running;
+                -o-animation-play-state: running;
+                animation-play-state: running;
+            }
+            @-webkit-keyframes colorRotate {
+                from {
+                    color: rgb(255, 0, 0);
+                }
+                16.6% {
+                    color: rgb(255, 0, 255);
+                }
+                33.3% {
+                    color: rgb(0, 0, 255);
+                }
+                50% {
+                    color: rgb(0, 255, 255);
+                }
+                66.6% {
+                    color: rgb(0, 255, 0);
+                }
+                83.3% {
+                    color: rgb(255, 255, 0);
+                }
+                to {
+                    color: rgb(255, 0, 0);
+                }
+            }
+            @-moz-keyframes colorRotate {
+                from {
+                    color: rgb(255, 0, 0);
+                }
+                16.6% {
+                    color: rgb(255, 0, 255);
+                }
+                33.3% {
+                    color: rgb(0, 0, 255);
+                }
+                50% {
+                    color: rgb(0, 255, 255);
+                }
+                66.6% {
+                    color: rgb(0, 255, 0);
+                }
+                83.3% {
+                    color: rgb(255, 255, 0);
+                }
+                to {
+                    color: rgb(255, 0, 0);
+                }
+            }
+            @-o-keyframes colorRotate {
+                from {
+                    color: rgb(255, 0, 0);
+                }
+                16.6% {
+                    color: rgb(255, 0, 255);
+                }
+                33.3% {
+                    color: rgb(0, 0, 255);
+                }
+                50% {
+                    color: rgb(0, 255, 255);
+                }
+                66.6% {
+                    color: rgb(0, 255, 0);
+                }
+                83.3% {
+                    color: rgb(255, 255, 0);
+                }
+                to {
+                    color: rgb(255, 0, 0);
+                }
+            }
+            @keyframes colorRotate {
+                from {
+                    color: rgb(255, 0, 0);
+                }
+                16.6% {
+                    color: rgb(255, 0, 255);
+                }
+                33.3% {
+                    color: rgb(0, 0, 255);
+                }
+                50% {
+                    color: rgb(0, 255, 255);
+                }
+                66.6% {
+                    color: rgb(0, 255, 0);
+                }
+                83.3% {
+                    color: rgb(255, 255, 0);
+                }
+                to {
+                    color: rgb(255, 0, 0);
+                }
+            }
+
+        </style>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.13.1/lodash.min.js"></script>
+
+    </head>
+    <body>
+
+        <div class='w-100 relative'>
+
+            <MadeirOS></MadeirOS>
+
+            <noscript>
+
+                <header class='pa3 pa4-ns bg-white bw1 avenir'>
+                    <h1 class='near-black f4 f1-l f2-m fw6-l lh-title ttu tracked'>Matt Madeiro</h1>
+                    <h2 class='f6 f4-l lh-title  black-90 fw5'>Web developer/designer and occasional writer.</h2>
+                    <p class='f6 f5-l fw5 black-80 fw4-l mb0'>Based in Houston, Texas.</p>
+                </header>
+
+                <ul class='list ma0 mt1 pa3 pa4-ns'>
+                    <li class='dib mr4'>
+                        <a target="_blank" class='link near-black f3 db' href="http://twitter.com/MattMadeiro">
+                            <svg class="icon icon-twitter" aria-labelledby="Twitter"><use xlink:href="#icon-twitter"></use></svg>
+                        </a>
+                    </li>
+                    <li class='dib ml2'>
+                        <a target="_blank" class='link near-black f3 db' href="http://instagram.com/MattMadeiro">
+                            <svg class="icon icon-instagram" aria-labelledby="Instagram"><use xlink:href="#icon-instagram"></use></svg>
+                        </a>
+                    </li>
+                </ul>
+
+            </noscript>
+
+        </div>
+
+        <script src="js/vendor/riot.min.js"></script>
+        <script src="js/build/MadeirOS.min.js"></script>
+    </body>
+</html>
