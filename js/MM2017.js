@@ -32,7 +32,7 @@ riot.tag2('contact', '<div class="contact cf bg-dijon" onclick="{clickFocus}"> <
 			"work": [
 				{
 					author: "matt",
-					messages: ["Hey, thanks for asking!", "As of August 2016, I'm leading front-end design and development of a pretty badass IoT application for Meshify in Houston, TX.","I can't stop sweating. Please send coconut water."]
+					messages: ["Hey, thanks for asking!", "As of November 2017, I'm leading front-end design and development of a pretty badass IoT application for Meshify in Austin, TX.","I can't stop sweating. Please send coconut water."]
 				}
 			]
 		}
@@ -560,7 +560,7 @@ riot.tag2('app', '<article ref="{tagName.toLowerCase()}" class="{!parent.onPhone
 
 });
 
-riot.tag2('help', '<article class="help ph3 pb4"> <p class="near-black pt2 lh-copy"><span class="b">Hi! Welcome to <strong class="unicorn animate i fw4">madeirOS</strong> v1.0.</span> (I\'ve worked hard on this, and I\'m very eager to show you.)</p> <p class="near-black pt1 lh-copy">My name is Matt Madeiro. I\'m a web developer, designer, and <a class="link blue" href="#writing">sometimes-writer</a> based in Houston, Texas. This is all my stuff. I hope you like it! <span class="dn di-ns">Click all the things, and don\'t be afraid to move these windows around, too.</span></p> <p class="near-black pt1 lh-copy dn-ns b">To get started, click the big X button in the upper right.</p> <p class="near-black pt1 lh-copy">(Psst. Don\'t forget to sign the <a class="link blue" href="#guestbook">Guest Book</a> before you leave!)</p> </article>', '', '', function(opts) {
+riot.tag2('help', '<article class="help ph3 pb4"> <p class="near-black pt2 lh-copy"><span class="b">Hi! Welcome to <strong class="unicorn animate i fw4">madeirOS</strong> v1.0.</span> (I\'ve worked hard on this, and I\'m very eager to show you.)</p> <p class="near-black pt1 lh-copy">My name is Matt Madeiro. I\'m a web designer, developer, and <a class="link blue" href="#writing">sometimes-writer</a> based in Austin, Texas. This is all my stuff. I hope you like it! <span class="dn di-ns">Click all the things, and don\'t be afraid to move these windows around, too.</span></p> <p class="near-black pt1 lh-copy dn-ns b">To get started, click the big X button in the upper right.</p> <p class="near-black pt1 lh-copy">(Psst. Don\'t forget to sign the <a class="link blue" href="#guestbook">Guest Book</a> before you leave!)</p> </article>', '', '', function(opts) {
 });
 
 riot.tag2('rawhtml', '', '', '', function(opts) {
