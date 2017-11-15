@@ -205,7 +205,7 @@
                 <div class='fl pv2 w-80 w-90-ns {draggable ? "cursor-move" : ''}'>
                     <h2 class='ma0 ml3 normal fw4 f6 f5-ns ttu tracked'>{name}</h2>
                 </div>
-                <button class='db bg-light-gray fl w-20 w-10-ns tc pv2 bl bw1 b--black bt-0 br-0 bb-0 hover-invert pointer' onclick={ clickClose } aria-label="Close {name} Window">
+                <button class='db bg-light-gray fl w-20 w-10-ns tc pv2 bl bw1 br0 b--black bt-0 br-0 bb-0 hover-invert pointer' onclick={ clickClose } aria-label="Close {name} Window">
                     <svg class="center f4-ns f5 db icon icon-cross" aria-hidden="true">
                         <use xlink:href="#icon-cross"></use>
                     </svg>

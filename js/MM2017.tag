@@ -153,7 +153,7 @@
 	</div>
 
 	<div class='absolute bg-light-gray bt w-100 bw1 b--black db dn-l' style="bottom: 0; left: 0">
-		<button class='ma0 link f4 db bg-light-gray pv1 br bw1 b--black hover-invert pointer' onclick={ backToList } style="width: 15%" aria-label="Return to Main Favorites List">
+		<button class='ma0 link f4 db bg-light-gray pv1 br br0 bw1 b--black hover-invert pointer' onclick={ backToList } style="width: 15%" aria-label="Return to Main Favorites List">
 			<svg class="db center icon icon-arrow-left" aria-hidden="true"><use xlink:href="#icon-arrow-left"></use></svg>
 		</button>
 	</div>
@@ -256,7 +256,7 @@
 			</div>
 
 			<div class='absolute bg-light-gray bt w-100 bw1 b--black' style="bottom: 0; left: 0">
-				<button class='ma0 link f4 db bg-light-gray pv1 br bw1 b--black hover-invert pointer' onclick={ backToList } style="width: 15%" aria-label="Return to Main Favorites List">
+				<button class='ma0 link f4 db bg-light-gray pv1 br br0 bw1 b--black hover-invert pointer' onclick={ backToList } style="width: 15%" aria-label="Return to Main Favorites List">
 					<svg class="db center icon icon-arrow-left" aria-hidden="true"><use xlink:href="#icon-arrow-left"></use></svg>
 				</button>
 			</div>
@@ -723,7 +723,7 @@
                 <div class='fl pv2 w-80 w-90-ns {draggable ? "cursor-move" : ''}'>
                     <h2 class='ma0 ml3 normal fw4 f6 f5-ns ttu tracked'>{name}</h2>
                 </div>
-                <button class='db bg-light-gray fl w-20 w-10-ns tc pv2 bl bw1 b--black bt-0 br-0 bb-0 hover-invert pointer' onclick={ clickClose } aria-label="Close {name} Window">
+                <button class='db bg-light-gray fl w-20 w-10-ns tc pv2 bl bw1 br0 b--black bt-0 br-0 bb-0 hover-invert pointer' onclick={ clickClose } aria-label="Close {name} Window">
                     <svg class="center f4-ns f5 db icon icon-cross" aria-hidden="true">
                         <use xlink:href="#icon-cross"></use>
                     </svg>
@@ -1063,7 +1063,7 @@
 </Memories>
 <NotButton>
 
-	<button class='ba pa2 ph3 bg-white bw1 b--black tc b f5 pointer hover-invert'>{ opts.title }</button>
+	<button class='ba pa2 ph3 bg-white bw1 b--black tc b f5 pointer hover-invert br0'>{ opts.title }</button>
 
 </NotButton>
 <Terminal>

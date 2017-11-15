@@ -55,7 +55,7 @@
 			</div>
 
 			<div class='absolute bg-light-gray bt w-100 bw1 b--black' style="bottom: 0; left: 0">
-				<button class='ma0 link f4 db bg-light-gray pv1 br bw1 b--black hover-invert pointer' onclick={ backToList } style="width: 15%" aria-label="Return to Main Favorites List">
+				<button class='ma0 link f4 db bg-light-gray pv1 br br0 bw1 b--black hover-invert pointer' onclick={ backToList } style="width: 15%" aria-label="Return to Main Favorites List">
 					<svg class="db center icon icon-arrow-left" aria-hidden="true"><use xlink:href="#icon-arrow-left"></use></svg>
 				</button>
 			</div>
