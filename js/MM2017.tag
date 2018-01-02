@@ -662,9 +662,9 @@
 
     <ul role="navigation" class='list pl0 ma0 w-100 w-10-l relative-l fr cf' style='min-width: 150px' each={ apps, i in lists }>
         <li class='mb4 fl w-33 tc w-100-l relative-l' each={ apps }>
-            <a href="/#{ tagName.toLowerCase() }" class='no-underline pointer dib'>
+            <a href="../#{ tagName.toLowerCase() }" class='no-underline pointer dib'>
                 <div class='center mb2' style="width: 75px;">
-                    <img aria-hidden="true" name='img' class='mw-100' src="icons/{ tagName }.png" />
+                    <img aria-hidden="true" name='img' class='mw-100' src="../icons/{ tagName }.png" />
                 </div>
                 <p class='black-80 ma0 fw5 f6 pt1'>{ name }</p>
             </a>
