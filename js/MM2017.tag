@@ -1141,7 +1141,7 @@
 						<RawHTML html="{memory.desc}"></RawHTML>
 					</p>
 
-					<img if={ showPictures && memory.imgurl !== "false" } src="/images/{memory.imgurl}-o.jpg" class='measure-m measure-l mw-100 mv3'/>
+					<img if={ showPictures && memory.imgurl !== "false" } src="images/{memory.imgurl}-o.jpg" class='measure-m measure-l mw-100 mv3'/>
 
 				</article>
 
