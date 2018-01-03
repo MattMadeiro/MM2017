@@ -86,6 +86,162 @@
 		tag.currentPeep = false;
 		tag.storedScroll = 0;
 
+		var peeps = [
+		  {
+		    "first": "David",
+		    "last": "Crandall",
+		    "website": "crandallography.com",
+		    "instagram": "davidcrandall",
+		    "twitter": "davidcrandall",
+		    "facebook": "davidcrandall",
+		    "notes": "David might actually be a unicorn. Despite that (because of it?), he's a genuinely good father, artist, and someone I'm so proud to call friend. One day, he and I will live in the same city. Heads will roll with happiness."
+		  },
+		  {
+		    "first": "Kym",
+		    "last": "Pham",
+		    "website": "kympham.com",
+		    "instagram": "kympham",
+		    "twitter": "null",
+		    "facebook": "kympham",
+		    "notes": "I first met Kym at the inaugural World Domination Summit in Portland, Oregon back in 2011. We shared a mutual fascination for minimalism, bungee jumping, and exploring every other remarkable human being that attended. Years later, her amazing eye—and unending drive for adventure—have lead her to become one of the best things on Instagram. (And, y'know, the world.)"
+		  },
+		  {
+		    "first": "Mark",
+		    "last": "Powers",
+		    "website": "powerspercussion.com",
+		    "instagram": "markpowers",
+		    "twitter": "markpowers",
+		    "facebook": "markpowers",
+		    "notes": "The best damn drummer/<a class='link blue' href='http://www.powerspercussion.com/products/'>children's book author</a> I know, and a genuinely adventurous eater. The days we spent eating our way through Houston are some of my favorite memories of home. Just make sure you ask him about stinky tofu."
+		  },
+		  {
+		    "first": "Chelsea",
+		    "last": "Vincent",
+		    "website": "chelseavincent.com",
+		    "instagram": "cevincen",
+		    "twitter": "cevincen",
+		    "facebook": "null",
+		    "notes": "The most hard-working actor/yogi/badass I know. I've known Chelsea since fourth grade, and even back then I had an inkling she was something remarkable. Her work ethic, to this day, remains unparalleled. Don't ask her about the spare keys, though."
+		  },
+		  {
+		    "first": "Frank",
+		    "last": "Chimero",
+		    "website": "frankchimero.com",
+		    "instagram": "frankchimero",
+		    "twitter": "frankchimero",
+		    "facebook": "frankchimero",
+		    "notes": "Kind of my design idol. I'm only moderately embarrassed to admit that. Have you read his <a href=\"#library\" class='link blue'>book</a>?"
+		  },
+		  {
+		    "first": "Jon",
+		    "last": "Gold",
+		    "website": "jon.gold",
+		    "instagram": "jongold",
+		    "twitter": "jongold",
+		    "facebook": "jongold",
+		    "notes": "One of my favorite follows on Twitter, both for his unending fascination with American patriotism and his super-wonderful home page. (Spoiler alert: it was a fundamental inspiration for my own.)"
+		  },
+		  {
+		    "first": "Rolf",
+		    "last": "Potts",
+		    "website": "rolfpotts.com",
+		    "instagram": "rolfpotts",
+		    "twitter": "rolfpotts",
+		    "facebook": "rolfpotts",
+		    "notes": "His tiny tome to adventure, <a class='link blue' href=\"https://smile.amazon.com/Vagabonding-Uncommon-Guide-Long-Term-Travel/dp/0812992180/ref=sr_1_1?ie=UTF8&qid=1475458070&sr=8-1&keywords=vagabonding\">Vagabonding</a>, was the chief source of motivation for my year-long stay in Southeast Asia. I can't overstate how important this book was to me, and I plan to keep a copy at hand for years to come."
+		  },
+		  {
+		    "first": "Austin",
+		    "last": "Kleon",
+		    "website": "austinkleon.com",
+		    "instagram": "austinkleon",
+		    "twitter": "austinkleon",
+		    "facebook": "austinkleon",
+		    "notes": "My favorite author of \"make shit, and don't feel bad about it.\" I love his no-nonsense approach to art and creativity, and I hope he takes it as a compliment when I say that I plan to steal from him for the rest of my life."
+		  },
+		  {
+		    "first": "Michelle",
+		    "last": "Nickolaisen",
+		    "website": "bombchelle.com",
+		    "instagram": "michelleshock",
+		    "twitter": "_ChelleShock",
+		    "facebook": "bombchellebiz",
+		    "notes": "A writer, entrepreneur, and—in her words!—productivity nerd. On top of all that, though, she's a greatly kind and considerate friend, one of the few people I can honestly say that I'm glad to have met in my years as a Paleo/minimalist/whatever blogger. She can also kick your ass."
+		  },
+		  {
+		    "first": "Trent",
+		    "last": "Walton",
+		    "website": "trentwalton.com",
+		    "instagram": "null",
+		    "twitter": "trentwalton",
+		    "facebook": "null",
+		    "notes": "A tremendous designer, and a huge source of information about typography. I know very little about fonts, still, but what I've gleaned is solely due to his willingness to share with the world wide web. Thanks, Trent."
+		  },
+		  {
+		    "first": "Maggie",
+		    "last": "Doyne",
+		    "website": "blinknow.org",
+		    "instagram": "blinknoworg",
+		    "twitter": "blinknow",
+		    "facebook": "BlinkNow.org",
+		    "notes": "One of the most genuinely caring and selfless human beings I've ever had the pleasure to meet. A genuine inspiration, and the reason I won't forget my 25th birthday anytime soon."
+		  },
+		  {
+		    "first": "Dallas",
+		    "last": "Hartwig",
+		    "website": "dallashartwig.com",
+		    "instagram": "dallashartwig",
+		    "twitter": "dallashartwig",
+		    "facebook": "mrdallashartwig",
+		    "notes": "I'm pretty uncomfortable with how much technology occupies every hour of my day. Dallas is the only author I've encountered who speaks to that exact sentiment, and I'm trying today to take cues from his <a class='link blue' href='http://dallashartwig.com/moresociallessmedia/'>More Social, Less Media</a> movement. He's also a tremendous nature buff, and I am therefore tremendously jelly."
+		  },
+		  {
+		    "first": "Robert",
+		    "last": "Florence",
+		    "website": "landofexcitement.com",
+		    "instagram": "",
+		    "twitter": "robertflorence",
+		    "facebook": "",
+		    "notes": "I blame Robert for a lot of things. He broke my heart when he wrapped his <a class='link blue' href='https://www.rockpapershotgun.com/2016/09/27/cardboard-children-goodbye/#more-401169'>Cardboard Children column</a> over at Rock, Paper Shotgun after six straight years of incredible work. He also hooked me on board games, and my collection continues to grow in the wake of his departure."
+		  },
+		  {
+		    "first": "Quintin",
+		    "last": "Smith",
+		    "website": "shutupandsitdown.com",
+		    "instagram": "",
+		    "twitter": "Quinns108",
+		    "facebook": "",
+		    "notes": "My favorites writer of games is now an integral part of the team over at Shut Up and Sit Down, a site dedicated wholly to bankrupting my wallet with hysterical video reviews of the best board games around. He's also hysterical."
+		  },
+		  {
+		    "first": "Anne",
+		    "last": "Lamott",
+		    "website": "",
+		    "instagram": "",
+		    "twitter": "ANNELAMOTT",
+		    "facebook": "",
+		    "notes": "My writer idol. Her meditation on writing, <em>Bird by Bird</em>, is my favorite on the subject, a warm, richly comedic, and deeply personal introspective on the sort of madness that must possess a person to sit down and try and permanently record their thoughts."
+		  },
+		  {
+		    "first": "Jodi",
+		    "last": "Ettenberg",
+		    "website": "legalnomads.com",
+		    "instagram": "legalnomads",
+		    "twitter": "legalnomads",
+		    "facebook": "legalnomads",
+		    "notes": "Jodi's a former lawyer turned food writer, and one of my favorites at that. There's a lot to admire: her unflinching dedication to traveling alone as a woman for several years going, her unfortunate tendency to be target number one any time a nearby bird decides to poop, and her deep love for soup. We met for a bowl of bun bo hue in Ho Chi Minh, and it stands still as one of my favorite memories from that month in Vietnam. Keep on rocking, Jodi."
+		  },
+		  {
+		    "first": "Emily",
+		    "last": "Short",
+		    "website": "emshort.wordpress.com",
+		    "instagram": "",
+		    "twitter": "emshort",
+		    "facebook": "",
+		    "notes": "My first exposure to interactive fiction came with ADRIFT, a GUI-ified version of traditional IF-making tools. I've long since left that community, but my interest in dynamic fiction and text-based narratives continues still. Emily Short has the distinction of being my favorite gateway to that world: a reflective, measured voice on the development of the medium, with excitement to spare on all that it could offer, and all that it offers today to a staggering array of unique voices."
+		  }
+		];
+
 		tag.showProfile = function(e) {
 			tag.storePosition();
 			tag.currentPeep = e.item.peep;
@@ -114,17 +270,6 @@
 			tag.currentPeep = false;
 		}
 
-		RiotControl.on('favorites_list', function(favorites){
-			tag.peeps = _.orderBy(favorites, 'last', 'asc');
-			tag.byLastName = _.groupBy(tag.peeps, function(peep){
-				return peep.last.charAt(0);
-			});
-			if(tag.isMounted) {
-				console.log(tag.byLastName);
-				tag.update();
-			}
-		});
-
 		tag.on('updated', function(){
 			if(!tag.currentPeep && tag.storedScroll) {
 				tag.refs.list.scrollTop = tag.storedScroll;
@@ -132,9 +277,14 @@
 			}
 		});
 
-		tag.on('mount', function(){
-            RiotControl.trigger('favorites_init');
-        });
+        tag.preparePeeps = function(){
+        	tag.peeps = _.orderBy(peeps, 'last', 'asc');
+        	tag.byLastName = _.groupBy(tag.peeps, function(peep){
+        		return peep.last.charAt(0);
+        	});
+        }
+
+        tag.preparePeeps();
 
 	</script>
 

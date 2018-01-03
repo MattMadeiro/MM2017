@@ -104,7 +104,7 @@
 			"work": [
 				{
 					author: "matt",
-					messages: ["Hey, thanks for asking!", "As of November 2017, I'm leading front-end design and development of a pretty badass IoT application for Meshify in Austin, TX.","I can't stop sweating. Please send coconut water."]
+					messages: ["Hey, thanks for asking!", "As of January 2018, I'm operating my own design studio out of sunny Houston, Texas. If you're curious to know more, please visit my <a href='/' class='link blue'>main site</a>.","I can't stop sweating. Please send coconut water."]
 				}
 			]
 		}

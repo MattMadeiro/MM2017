@@ -36,7 +36,7 @@
 	<script>
 
 		var tag = this;
-		tag.messages = [];
+		tag.messages = ["Hello, world. Type help for more information."];;
 		tag.commands = [];
 		tag.currentKeys = [];
 		tag.konamiKeys = [38,38,40,40,37,39,37,39,66,65];
@@ -65,11 +65,77 @@
 
 		tag.sendCommand = function(cmd) {
 			tag.currentKeys = [];
-			RiotControl.trigger('terminal_input', cmd);
+			tag.commands.push(cmd);
+			tag.checkCommand(cmd);
 		}
 
 		tag.clearMessages = function(){
-			RiotControl.trigger('terminal_clear');
+			tag.messages = [];
+			tag.update();
+		}
+
+		tag.checkCommand = function(cmd) {
+			// Cheater.
+			var result = "";
+			switch (cmd) {
+				case 'matt madeiro':
+					result = "That's me!";
+					break;
+				case 'xenia kulick':
+					result = "<3, princess.";
+					break;
+				case 'tyler owens':
+					result = "You silly bitch.";
+					break;
+				case 'elyse owens':
+					result = "SWEET TEA, MOTHER@#$#@!";
+					break;
+				case 'chelsea vincent':
+					result = "WE DON'T HAVE THE SPARE KEYS!";
+					break;
+				case 'will decker':
+					result = "Stupidly tall.";
+					break;
+				case 'jason cook':
+					result = "Stupid sexy Flanders.";
+					break;
+				case 'adam madeiro':
+					result = "Ah, yes. Mi hermano de Mexico.";
+					break;
+				case 'cheryle madeiro':
+					result = "The best woman I know.";
+					break;
+				case 'john madeiro':
+					result = "A goddamn rockstar and a great father.";
+					break;
+				case 'maggie doyne':
+					result = "The most caring person I know, and a genuine inspiration.";
+					break;
+				case 'david crandall':
+					result = "YOU'RE A UNICORN, HARRY";
+					break;
+				case 'help':
+					result = "Type things! All sorts of things. Some things will say funny things, and others will do funny things. Here's something decidedly unfunny, but still useful: type and enter 'clear' (sans quotes) to wipe this display clean.";
+					break;
+				case 'ls':
+					result = "Writing.exe Tools.exe Terminal.exe GuestBook.exe Library.exe Contact.exe Favorites.exe MysteriousFolder";
+					break;
+				case 'pwd':
+					result = '/MadeirOS/users/guest/home';
+					break;
+				case 'cd mysteriousfolder':
+					result = "Nothing in here...yet.";
+					break;
+				// Functions
+				case 'clear':
+					tag.clearMessages();
+					result = '';
+					break;
+				default:
+					result = "$ " + cmd + ": command not found";
+					break;
+			}
+			tag.messages.push(result);
 		}
 
 		tag.checkKonami = function(e) {
@@ -86,7 +152,7 @@
 		}
 
 		tag.konami = function(){
-			RiotControl.trigger('terminal_msg', "Oh, you.");
+			tag.messages.push("Oh, you.");
 			tag.refs.cmd.value = "";
 		}
 
@@ -110,26 +176,6 @@
 				tag.refs.cmd.value = typeof tag.commands[tag.currentCommand] != 'undefined' ? tag.commands[tag.currentCommand] : "";
 			}
 		}
-
-		RiotControl.on('terminal_command', function(f){
-			tag[f]();
-			if(tag.isMounted) {
-				tag.update();
-			}
-		});
-
-		RiotControl.on('terminal_list', function(messages){
-			tag.messages = messages;
-			if(tag.isMounted) {
-				tag.update();
-			}
-		});
-
-		tag.on('mount', function(){
-			tag.refs.cmd.focus();
-			RiotControl.trigger('terminal_init');
-			tag.update();
-		});
 
 	</script>
 

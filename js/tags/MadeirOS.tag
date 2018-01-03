@@ -87,16 +87,6 @@
             }
         }
 
-        tag.reloadData = function(){
-            var self = this;
-            GET('secrets/sourcedata.php', function(sData) {
-                sourceData = JSON.parse(sData);
-                self._allData = sourceData;
-                self.update();
-                riot.update();
-            });
-        }
-
         tag.checkForPhone = function(){
             tag.mq = window.matchMedia('screen and (min-width: 60em)');
             if(tag.mq.matches) {
@@ -110,6 +100,7 @@
         tag.fetchArticle = function(slug) {
             tag.startApp('documents');
             RiotControl.trigger('load_article', slug);
+
         }
 
         tag.setupRoutes = function(){
@@ -127,12 +118,8 @@
 
         tag.on('mount', function(){
             tag.checkForPhone();
-            RiotControl.trigger('reload_data');
-            RiotControl.one('data_loaded', function(){
-                tag.setupRoutes();
-                riot.route.start(true);
-                tag.update();
-            });
+            tag.setupRoutes();
+            riot.route.start(true);
         });
 
     </script>
@@ -144,9 +131,9 @@
 
     <ul role="navigation" class='list pl0 ma0 w-100 w-10-l relative-l fr cf' style='min-width: 150px' each={ apps, i in lists }>
         <li class='mb4 fl w-33 tc w-100-l relative-l' each={ apps }>
-            <a href="../#{ tagName.toLowerCase() }" class='no-underline pointer dib'>
+            <a href="#{ tagName.toLowerCase() }" class='no-underline pointer dib'>
                 <div class='center mb2' style="width: 75px;">
-                    <img aria-hidden="true" name='img' class='mw-100' src="../icons/{ tagName }.png" />
+                    <img aria-hidden="true" name='img' class='mw-100' src="icons/{ tagName }.png" />
                 </div>
                 <p class='black-80 ma0 fw5 f6 pt1'>{ name }</p>
             </a>

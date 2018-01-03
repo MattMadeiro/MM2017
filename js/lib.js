@@ -1,23 +1,7 @@
-// Store definition.
-// Flux stores house application logic and state that relate to a specific domain.
 function MadeiroStore() {
   riot.observable(this); // Riot provides our event emitter.
 
   var self = this;
-
-  self.POST = function(url, payload, callback){
-    var xmlhttp;
-    // compatible with IE7+, Firefox, Chrome, Opera, Safari
-    xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function(){
-        if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
-            callback(xmlhttp.responseText);
-        }
-    }
-    xmlhttp.open("POST", url, true);
-    xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    xmlhttp.send(payload);
-  }
 
   self.GET = function(url, callback){
     var xmlhttp;
@@ -32,45 +16,123 @@ function MadeiroStore() {
     xmlhttp.send();
   }
 
-  self.stupidCommas = function(char, list, fields) {
-    return _.map(list, function(o) {
-      var formatted;
-      _.each(fields, function(field){
-        formatted = o[field].split(char);
-        o[field] = formatted.join(',');
-      });
-      return o;
-    });
-  }
-
-  self.favorites = [];
-  self.guestbook = [];
-  self.library = [];
-  self.writing = [];
-  self.terminal = ["Hello, world. Type help for more information."];
-
-  self.on('reload_data', function(callback){
-    self.GET('secrets/sourcedata.php', function(sData) {
-        sourceData = JSON.parse(sData);
-        self.favorites = self.stupidCommas('$', sourceData.favorites, ['notes']);
-        self.guestbook = sourceData.guestbook;
-        self.library = sourceData.library;
-        self.writing = self.stupidCommas('$', sourceData.writing, ['title']);
-        self.tools = self.stupidCommas('$', sourceData.tools, ['tech']);
-        self.memories = self.stupidCommas('~', sourceData.memories, ['title','desc']);
-        self.trigger('guestbook_list', self.guestbook);
-        self.trigger('data_loaded', self.guestbook);
-        if(typeof callback != 'undefined') {
-          callback();
-        }
-    });
-  });
+  self.articles = [
+      {
+        "title": "Why I Don't Read Health Blogs Anymore",
+        "date": "2015-01-15",
+        "slug": "health",
+        "category": "none"
+      },
+      {
+        "title": "How to Live a Life Without Fear",
+        "date": "2014-07-31",
+        "slug": "fear",
+        "category": "The Bigger Picture"
+      },
+      {
+        "title": "The Last Stop on the Road",
+        "date": "2014-04-23",
+        "slug": "last-stop",
+        "category": "The Bigger Picture"
+      },
+      {
+        "title": "10 Truths I Hope I Never Forget",
+        "date": "2013-09-09",
+        "slug": "10-truths",
+        "category": "The Bigger Picture"
+      },
+      {
+        "title": "The Secrets of an Endless Optimist",
+        "date": "2012-07-05",
+        "slug": "optimist",
+        "category": "The Bigger Picture"
+      },
+      {
+        "title": "The One Question That Everyone Asks",
+        "date": "2014-06-10",
+        "slug": "one-question",
+        "category": "The Big Damn Trip"
+      },
+      {
+        "title": "Life Lessons From a Stick of Seaweed",
+        "date": "2013-08-01",
+        "slug": "seaweed",
+        "category": "The Big Damn Trip"
+      },
+      {
+        "title": "To the Guy Who Stole My iPod",
+        "date": "2013-08-22",
+        "slug": "ipod",
+        "category": "Lessons Hard Learned"
+      },
+      {
+        "title": "Am I Ready for This?",
+        "date": "2013-04-13",
+        "slug": "ready",
+        "category": "Lessons Hard Learned"
+      },
+      {
+        "title": "You Pack Your Own Bags",
+        "date": "2013-12-05",
+        "slug": "bags",
+        "category": "The Blue Period"
+      },
+      {
+        "title": "A Few Thoughts on Dying",
+        "date": "2013-09-14",
+        "slug": "dying",
+        "category": "The Blue Period"
+      },
+      {
+        "title": "Why I Might Actually be a Phony",
+        "date": "2013-05-17",
+        "slug": "phony",
+        "category": "The Blue Period"
+      },
+      {
+        "title": "I Met My Brother in Mexico",
+        "date": "2014-07-01",
+        "slug": "mexico",
+        "category": "All in the Family"
+      },
+      {
+        "title": "To My Father",
+        "date": "2013-06-07",
+        "slug": "father",
+        "category": "All in the Family"
+      },
+      {
+        "title": "To My Mother",
+        "date": "2013-05-12",
+        "slug": "mother",
+        "category": "All in the Family"
+      },
+      {
+        "title": "What I Wish I'd Known Before Going to College",
+        "date": "2013-10-30",
+        "slug": "college",
+        "category": "The Days of My Youth"
+      },
+      {
+        "title": "8,000 Miles From Who I Used to Be",
+        "date": "2013-07-08",
+        "slug": "miles",
+        "category": "The Days of My Youth"
+      },
+      {
+        "title": "How to Act Like a Kid Again",
+        "date": "2012-07-18",
+        "slug": "kid",
+        "category": "The Days of My Youth"
+      }
+    ];
+  self.slugs = _.map(self.articles, 'slug');
 
   self.on('load_article', function(slug){
-    var article = _.find(self.writing, {'slug': slug});
-    if(!_.isNil(article)) {
+    if(_.includes(self.slugs, slug)) {
       self.GET('secrets/data/articles/' + slug + '.html', function(html){
         if(html) {
+          var article = _.find(self.articles, ['slug', slug]);
           self.trigger('article_loaded', article.title, article.date, html);
         }
       });
@@ -79,67 +141,6 @@ function MadeiroStore() {
       console.log("Article doesn't exist.");
       self.trigger('article_loaded', null, null, null);
     }
-  });
-
-  self.on('terminal_init', function(){
-    self.trigger('terminal_list', self.terminal);
-  });
-
-  self.on('terminal_clear', function(){
-    self.terminal = [];
-    self.trigger('terminal_list', self.terminal);
-  });
-
-  self.on('terminal_msg', function(msg){
-    self.terminal.push(msg);
-    self.trigger('terminal_list', self.terminal);
-  });
-
-  self.on('terminal_input', function(cmd){
-    self.POST('secrets/terminal.php', "cmd=" + cmd, function(response){
-      var r = response.split('_');
-      var t = parseInt(r[0]);
-      if(t) {
-        self.trigger('terminal_command', r[1]);
-      }
-      else {
-        self.terminal.push(r[1]);
-        self.trigger('terminal_list', self.terminal);
-      }
-    });
-  });
-
-  self.on('tools_init', function() {
-    self.trigger('tools_list', self.tools);
-  });
-
-  self.on('writing_init', function() {
-    self.trigger('writing_list', self.writing);
-  });
-
-  self.on('memories_init', function() {
-    self.trigger('memories_list', self.memories);
-  });
-
-  self.on('library_init', function() {
-    self.trigger('library_list', self.library);
-  });
-
-  self.on('favorites_init', function() {
-    self.trigger('favorites_list', self.favorites);
-  });
-
-  self.on('guestbook_init', function() {
-    self.trigger('guestbook_list', self.guestbook);
-  });
-
-  self.on('guestbook_add', function(newEntry) {
-    // self.guestbook.push(newEntry);
-    self.POST('secrets/guestbook-add.php', "payload=" + JSON.stringify(newEntry), function(response){
-      if(response === 'added') {
-        self.trigger('reload_data');
-      }
-    });
   });
 
 };

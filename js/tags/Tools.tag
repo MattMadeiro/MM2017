@@ -21,16 +21,14 @@
 	<script>
 
 		var tag = this;
-		tag.tools = [];
-
-		RiotControl.on('tools_list', function(tools){
-			tag.tools = tools;
-			tag.update();
-		});
-
-		tag.on('mount', function(){
-			RiotControl.trigger('tools_init');
-		});
+		tag.tools = [
+		  {
+		    "title": "CSV.me",
+		    "desc": "A small (and simple!) in-browser CSV editor.",
+		    "tech": "Riot.js, Tachyons",
+		    "link": "http://mattmadeiro.com/csvme"
+		  }
+		];
 
 	</script>
 

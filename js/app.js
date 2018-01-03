@@ -6,10 +6,6 @@ if('ontouchstart' in window) {
     TOUCH_ENABLED = true;
 }
 
-// riot.util.tmpl.errorHandler = function (err) {
-//   console.error(err.message + ' in ' + err.riotData.tagName) // your error logic here
-// }
-
 riot.mount('MadeirOS', {
     apps:
         {

@@ -104,7 +104,7 @@
 			"work": [
 				{
 					author: "matt",
-					messages: ["Hey, thanks for asking!", "As of November 2017, I'm leading front-end design and development of a pretty badass IoT application for Meshify in Austin, TX.","I can't stop sweating. Please send coconut water."]
+					messages: ["Hey, thanks for asking!", "As of January 2018, I'm operating my own design studio out of sunny Houston, Texas. If you're curious to know more, please visit my <a href='/' class='link blue'>main site</a>.","I can't stop sweating. Please send coconut water."]
 				}
 			]
 		}
@@ -287,6 +287,162 @@
 		tag.currentPeep = false;
 		tag.storedScroll = 0;
 
+		var peeps = [
+		  {
+		    "first": "David",
+		    "last": "Crandall",
+		    "website": "crandallography.com",
+		    "instagram": "davidcrandall",
+		    "twitter": "davidcrandall",
+		    "facebook": "davidcrandall",
+		    "notes": "David might actually be a unicorn. Despite that (because of it?), he's a genuinely good father, artist, and someone I'm so proud to call friend. One day, he and I will live in the same city. Heads will roll with happiness."
+		  },
+		  {
+		    "first": "Kym",
+		    "last": "Pham",
+		    "website": "kympham.com",
+		    "instagram": "kympham",
+		    "twitter": "null",
+		    "facebook": "kympham",
+		    "notes": "I first met Kym at the inaugural World Domination Summit in Portland, Oregon back in 2011. We shared a mutual fascination for minimalism, bungee jumping, and exploring every other remarkable human being that attended. Years later, her amazing eye—and unending drive for adventure—have lead her to become one of the best things on Instagram. (And, y'know, the world.)"
+		  },
+		  {
+		    "first": "Mark",
+		    "last": "Powers",
+		    "website": "powerspercussion.com",
+		    "instagram": "markpowers",
+		    "twitter": "markpowers",
+		    "facebook": "markpowers",
+		    "notes": "The best damn drummer/<a class='link blue' href='http://www.powerspercussion.com/products/'>children's book author</a> I know, and a genuinely adventurous eater. The days we spent eating our way through Houston are some of my favorite memories of home. Just make sure you ask him about stinky tofu."
+		  },
+		  {
+		    "first": "Chelsea",
+		    "last": "Vincent",
+		    "website": "chelseavincent.com",
+		    "instagram": "cevincen",
+		    "twitter": "cevincen",
+		    "facebook": "null",
+		    "notes": "The most hard-working actor/yogi/badass I know. I've known Chelsea since fourth grade, and even back then I had an inkling she was something remarkable. Her work ethic, to this day, remains unparalleled. Don't ask her about the spare keys, though."
+		  },
+		  {
+		    "first": "Frank",
+		    "last": "Chimero",
+		    "website": "frankchimero.com",
+		    "instagram": "frankchimero",
+		    "twitter": "frankchimero",
+		    "facebook": "frankchimero",
+		    "notes": "Kind of my design idol. I'm only moderately embarrassed to admit that. Have you read his <a href=\"#library\" class='link blue'>book</a>?"
+		  },
+		  {
+		    "first": "Jon",
+		    "last": "Gold",
+		    "website": "jon.gold",
+		    "instagram": "jongold",
+		    "twitter": "jongold",
+		    "facebook": "jongold",
+		    "notes": "One of my favorite follows on Twitter, both for his unending fascination with American patriotism and his super-wonderful home page. (Spoiler alert: it was a fundamental inspiration for my own.)"
+		  },
+		  {
+		    "first": "Rolf",
+		    "last": "Potts",
+		    "website": "rolfpotts.com",
+		    "instagram": "rolfpotts",
+		    "twitter": "rolfpotts",
+		    "facebook": "rolfpotts",
+		    "notes": "His tiny tome to adventure, <a class='link blue' href=\"https://smile.amazon.com/Vagabonding-Uncommon-Guide-Long-Term-Travel/dp/0812992180/ref=sr_1_1?ie=UTF8&qid=1475458070&sr=8-1&keywords=vagabonding\">Vagabonding</a>, was the chief source of motivation for my year-long stay in Southeast Asia. I can't overstate how important this book was to me, and I plan to keep a copy at hand for years to come."
+		  },
+		  {
+		    "first": "Austin",
+		    "last": "Kleon",
+		    "website": "austinkleon.com",
+		    "instagram": "austinkleon",
+		    "twitter": "austinkleon",
+		    "facebook": "austinkleon",
+		    "notes": "My favorite author of \"make shit, and don't feel bad about it.\" I love his no-nonsense approach to art and creativity, and I hope he takes it as a compliment when I say that I plan to steal from him for the rest of my life."
+		  },
+		  {
+		    "first": "Michelle",
+		    "last": "Nickolaisen",
+		    "website": "bombchelle.com",
+		    "instagram": "michelleshock",
+		    "twitter": "_ChelleShock",
+		    "facebook": "bombchellebiz",
+		    "notes": "A writer, entrepreneur, and—in her words!—productivity nerd. On top of all that, though, she's a greatly kind and considerate friend, one of the few people I can honestly say that I'm glad to have met in my years as a Paleo/minimalist/whatever blogger. She can also kick your ass."
+		  },
+		  {
+		    "first": "Trent",
+		    "last": "Walton",
+		    "website": "trentwalton.com",
+		    "instagram": "null",
+		    "twitter": "trentwalton",
+		    "facebook": "null",
+		    "notes": "A tremendous designer, and a huge source of information about typography. I know very little about fonts, still, but what I've gleaned is solely due to his willingness to share with the world wide web. Thanks, Trent."
+		  },
+		  {
+		    "first": "Maggie",
+		    "last": "Doyne",
+		    "website": "blinknow.org",
+		    "instagram": "blinknoworg",
+		    "twitter": "blinknow",
+		    "facebook": "BlinkNow.org",
+		    "notes": "One of the most genuinely caring and selfless human beings I've ever had the pleasure to meet. A genuine inspiration, and the reason I won't forget my 25th birthday anytime soon."
+		  },
+		  {
+		    "first": "Dallas",
+		    "last": "Hartwig",
+		    "website": "dallashartwig.com",
+		    "instagram": "dallashartwig",
+		    "twitter": "dallashartwig",
+		    "facebook": "mrdallashartwig",
+		    "notes": "I'm pretty uncomfortable with how much technology occupies every hour of my day. Dallas is the only author I've encountered who speaks to that exact sentiment, and I'm trying today to take cues from his <a class='link blue' href='http://dallashartwig.com/moresociallessmedia/'>More Social, Less Media</a> movement. He's also a tremendous nature buff, and I am therefore tremendously jelly."
+		  },
+		  {
+		    "first": "Robert",
+		    "last": "Florence",
+		    "website": "landofexcitement.com",
+		    "instagram": "",
+		    "twitter": "robertflorence",
+		    "facebook": "",
+		    "notes": "I blame Robert for a lot of things. He broke my heart when he wrapped his <a class='link blue' href='https://www.rockpapershotgun.com/2016/09/27/cardboard-children-goodbye/#more-401169'>Cardboard Children column</a> over at Rock, Paper Shotgun after six straight years of incredible work. He also hooked me on board games, and my collection continues to grow in the wake of his departure."
+		  },
+		  {
+		    "first": "Quintin",
+		    "last": "Smith",
+		    "website": "shutupandsitdown.com",
+		    "instagram": "",
+		    "twitter": "Quinns108",
+		    "facebook": "",
+		    "notes": "My favorites writer of games is now an integral part of the team over at Shut Up and Sit Down, a site dedicated wholly to bankrupting my wallet with hysterical video reviews of the best board games around. He's also hysterical."
+		  },
+		  {
+		    "first": "Anne",
+		    "last": "Lamott",
+		    "website": "",
+		    "instagram": "",
+		    "twitter": "ANNELAMOTT",
+		    "facebook": "",
+		    "notes": "My writer idol. Her meditation on writing, <em>Bird by Bird</em>, is my favorite on the subject, a warm, richly comedic, and deeply personal introspective on the sort of madness that must possess a person to sit down and try and permanently record their thoughts."
+		  },
+		  {
+		    "first": "Jodi",
+		    "last": "Ettenberg",
+		    "website": "legalnomads.com",
+		    "instagram": "legalnomads",
+		    "twitter": "legalnomads",
+		    "facebook": "legalnomads",
+		    "notes": "Jodi's a former lawyer turned food writer, and one of my favorites at that. There's a lot to admire: her unflinching dedication to traveling alone as a woman for several years going, her unfortunate tendency to be target number one any time a nearby bird decides to poop, and her deep love for soup. We met for a bowl of bun bo hue in Ho Chi Minh, and it stands still as one of my favorite memories from that month in Vietnam. Keep on rocking, Jodi."
+		  },
+		  {
+		    "first": "Emily",
+		    "last": "Short",
+		    "website": "emshort.wordpress.com",
+		    "instagram": "",
+		    "twitter": "emshort",
+		    "facebook": "",
+		    "notes": "My first exposure to interactive fiction came with ADRIFT, a GUI-ified version of traditional IF-making tools. I've long since left that community, but my interest in dynamic fiction and text-based narratives continues still. Emily Short has the distinction of being my favorite gateway to that world: a reflective, measured voice on the development of the medium, with excitement to spare on all that it could offer, and all that it offers today to a staggering array of unique voices."
+		  }
+		];
+
 		tag.showProfile = function(e) {
 			tag.storePosition();
 			tag.currentPeep = e.item.peep;
@@ -315,17 +471,6 @@
 			tag.currentPeep = false;
 		}
 
-		RiotControl.on('favorites_list', function(favorites){
-			tag.peeps = _.orderBy(favorites, 'last', 'asc');
-			tag.byLastName = _.groupBy(tag.peeps, function(peep){
-				return peep.last.charAt(0);
-			});
-			if(tag.isMounted) {
-				console.log(tag.byLastName);
-				tag.update();
-			}
-		});
-
 		tag.on('updated', function(){
 			if(!tag.currentPeep && tag.storedScroll) {
 				tag.refs.list.scrollTop = tag.storedScroll;
@@ -333,9 +478,14 @@
 			}
 		});
 
-		tag.on('mount', function(){
-            RiotControl.trigger('favorites_init');
-        });
+        tag.preparePeeps = function(){
+        	tag.peeps = _.orderBy(peeps, 'last', 'asc');
+        	tag.byLastName = _.groupBy(tag.peeps, function(peep){
+        		return peep.last.charAt(0);
+        	});
+        }
+
+        tag.preparePeeps();
 
 	</script>
 
@@ -426,10 +576,10 @@
 				var payload = {
 					name: tag.escapeInput(tag.refs.author.value),
 					location: tag.escapeInput(tag.refs.location.value),
-					msg: tag.escapeInput(tag.refs.message.value),
+					message: tag.escapeInput(tag.refs.message.value),
 					color: tag.authorColor
 				}
-				RiotControl.trigger('guestbook_add', payload);
+				firebase.database().ref('guestbook').push().set(payload);
 				tag.refs.author.value = '';
 				tag.refs.location.value = '';
 				tag.refs.message.value = '';
@@ -461,15 +611,12 @@
 			e.stopPropagation();
 		}
 
-		RiotControl.on('guestbook_list', function(entries){
-			tag.messages = entries;
-			if(tag.isMounted) {
-				tag.update();
-			}
-		});
-
 		tag.on('mount', function(){
-			RiotControl.trigger('guestbook_init');
+			firebase.database().ref('guestbook').on('value', function(snapshot) {
+			  var entries = snapshot.val();
+			  tag.messages = _.isNull(entries) ? [] : _.values(entries);
+			  tag.update();
+			});
 		});
 
 	</script>
@@ -497,21 +644,57 @@
 
 	<script>
 
-		var self = this;
-		this.books = [];
-
-		this.setScroll = function(){
-			this.output.scrollTop = this.output.scrollHeight;
-		}
-
-		RiotControl.on('library_list', function(books){
-			self.books = books;
-			self.update();
-		});
-
-		this.on('mount', function(){
-			RiotControl.trigger('library_init');
-		});
+		var tag = this;
+		tag.books = [
+		  {
+		    "name": "Bird by Bird",
+		    "author": "Anne Lamott",
+		    "amazon": "http://amzn.to/2dlfw83",
+		    "filename": "birdbybird"
+		  },
+		  {
+		    "name": "City of Saints and Madmen",
+		    "author": "Jeff VanderMeer",
+		    "amazon": "http://amzn.to/2dCzNbb",
+		    "filename": "cityofsaints"
+		  },
+		  {
+		    "name": "Letters of Note",
+		    "author": "Shaun Usher",
+		    "amazon": "http://amzn.to/2cLgRpL",
+		    "filename": "lettersofnote"
+		  },
+		  {
+		    "name": "Name of the Wind",
+		    "author": "Patrick Rothfuss",
+		    "amazon": "http://amzn.to/2dlfgWC",
+		    "filename": "nameofthewind"
+		  },
+		  {
+		    "name": "Show Your Work",
+		    "author": "Austin Kleon",
+		    "amazon": "http://amzn.to/2d7h6Hv",
+		    "filename": "showyourwork"
+		  },
+		  {
+		    "name": "Steal Like an Artist",
+		    "author": "Austin Kleon",
+		    "amazon": "http://amzn.to/2dlgyRf",
+		    "filename": "steal"
+		  },
+		  {
+		    "name": "Vagabonding",
+		    "author": "Rolf Potts",
+		    "amazon": "http://amzn.to/2dCzTQh",
+		    "filename": "vagabonding"
+		  },
+		  {
+		    "name": "The Shape of Design",
+		    "author": "Frank Chimero",
+		    "amazon": "http://shapeofdesignbook.com/",
+		    "filename": "chimero"
+		  }
+		];
 
 	</script>
 
@@ -605,16 +788,6 @@
             }
         }
 
-        tag.reloadData = function(){
-            var self = this;
-            GET('secrets/sourcedata.php', function(sData) {
-                sourceData = JSON.parse(sData);
-                self._allData = sourceData;
-                self.update();
-                riot.update();
-            });
-        }
-
         tag.checkForPhone = function(){
             tag.mq = window.matchMedia('screen and (min-width: 60em)');
             if(tag.mq.matches) {
@@ -628,6 +801,7 @@
         tag.fetchArticle = function(slug) {
             tag.startApp('documents');
             RiotControl.trigger('load_article', slug);
+
         }
 
         tag.setupRoutes = function(){
@@ -645,12 +819,8 @@
 
         tag.on('mount', function(){
             tag.checkForPhone();
-            RiotControl.trigger('reload_data');
-            RiotControl.one('data_loaded', function(){
-                tag.setupRoutes();
-                riot.route.start(true);
-                tag.update();
-            });
+            tag.setupRoutes();
+            riot.route.start(true);
         });
 
     </script>
@@ -662,9 +832,9 @@
 
     <ul role="navigation" class='list pl0 ma0 w-100 w-10-l relative-l fr cf' style='min-width: 150px' each={ apps, i in lists }>
         <li class='mb4 fl w-33 tc w-100-l relative-l' each={ apps }>
-            <a href="../#{ tagName.toLowerCase() }" class='no-underline pointer dib'>
+            <a href="#{ tagName.toLowerCase() }" class='no-underline pointer dib'>
                 <div class='center mb2' style="width: 75px;">
-                    <img aria-hidden="true" name='img' class='mw-100' src="../icons/{ tagName }.png" />
+                    <img aria-hidden="true" name='img' class='mw-100' src="icons/{ tagName }.png" />
                 </div>
                 <p class='black-80 ma0 fw5 f6 pt1'>{ name }</p>
             </a>
@@ -995,6 +1165,129 @@
 		tag.monthNames = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 		tag.chosenYear = false;
 
+		var memories = [
+		  {
+		    "date": "2014-05-09",
+		    "title": "The Big Damn Trip Ends",
+		    "imgurl": "false",
+		    "imgalt": "",
+		    "imgsize": "",
+		    "desc": "288 days after this reckless, life-changing journey began, my plane finally touched down in familiar territory: Houston, Texas. I might not know what it looks like, but I'm excited still to begin the next chapter of my life. First, however, I owe my mother several dozen hugs."
+		  },
+		  {
+		    "date": "2014-04-28",
+		    "title": "Rode My School Bus",
+		    "imgurl": "bus",
+		    "imgalt": "A bright yellow school bus with a cheering group of volunteers and Nepalese children in front of it.",
+		    "imgsize": 37,
+		    "desc": "I rounded out my Big Damn Trip through Asia in the best manner possible: spending an incredible week at the Kopila Valley Children's Home in Surkhet, Nepal. There, amidst the color and commotion of the first week of the school year, I hopped on a familiar yellow school bus and rode along for its first morning route through Surkhet's sleepy streets. Watching the seats crinkle under the weight of dozens of shy, smiling students made for a morning I'll never forget."
+		  },
+		  {
+		    "date": "2014-04-09",
+		    "title": "4,130 Meters Above",
+		    "imgurl": "annapurna",
+		    "imgalt": "Snow-covered peaks as seen from the Annapurna Base Camp.",
+		    "imgsize": 66,
+		    "desc": "Perched high in the white crags of the Himalaya, the Annapurna Base Camp has quickly--and rightfully--become a rite of passage for Nepali trekkers. My week-long slog there and back forced me to walk uphill six hours daily through sloped farmlands, white rock riverbeds, and slick paths carved into the ice, snow and hail dogging my footsteps through the mountains. Standing at the base camp, blinding white all around, I realized something profound: I'm an idiot. Don't do this in Converse, people. Don't be like Matt."
+		  },
+		  {
+		    "date": "2014-03-09",
+		    "title": "Wild Dogs & Dunes",
+		    "imgurl": "brothersm",
+		    "imgalt": "My brother and myself posing in by the dunes.",
+		    "imgsize": 41,
+		    "desc": "Slept by the runes of the Thor desert. I woke a little after midnight, choking a little on the camel stench soaked into my blanket. Footsteps filled my ears — soft pads at first, then quiet sniffling. A wild dog came into sight, snout pointed at my group's big pile of backpacks, before loping away on needle-thin legs. My eyes turned back to the stars. I'd never seen them painted in such broad strokes, and for a minute, at least, I forgot to breathe."
+		  },
+		  {
+		    "date": "2013-07-25",
+		    "title": "The Big Damn Trip Begins",
+		    "imgurl": "tripbegins",
+		    "imgalt": "My brother and myself posing in Shangri-la.",
+		    "imgsize": 44,
+		    "desc": "With my brother beside me, I grabbed a 10kg backpack and set out for a year-long excursion through Southeast Asia. We hit China, Malaysia, Singapore, Indonesia, Vietnam, Laos, Cambodia, Thailand, and India over the course of the journey, making great friends and greater memories all the while. The early plan was to blog the whole experience, keeping family and friends in the loop about our adventures, but the site never materialized. We made a conscious decision, early on, to keep most of the memories to ourselves. That's the antithesis of modern sharing culture, and most certainly didn't boost my Online Blogger Brand, but what we lost in followers, we more than made up for in time spent anywhere but with our screens."
+		  },
+		  {
+		    "date": "2012-12-25",
+		    "title": "Bought a School Bus(?)!",
+		    "imgurl": "xmas2012",
+		    "imgalt": "Matt Madeiro holding a birthday cake with a school bus on top.",
+		    "imgsize": 44,
+		    "desc": "For my 25th birthday, I decided to do something reckless: give up my birthday and try and raise $25,000 to buy a school bus for the students of Kopila Valley. I still can't believe it worked. I also can't believe we blew straight past to $25K and on to $43,870. <a class='link blue' href='/25'>Read the full story here.</a>"
+		  },
+		  {
+		    "date": "2011-08-09",
+		    "title": "My Accidental Acting Debut",
+		    "imgurl": "acting",
+		    "imgalt": "A screenshot from the music video.",
+		    "imgsize": 30,
+		    "desc": "On a whim, I attended the filming of Scotty McCreer's debut music video, 'I Love You This Big.' I, uh, didn't know who he was beforehand, but that didn't stop the directors from shoving my plaid-clad self into several <em>pivotal</em> scenes. <a href=\"https://www.youtube.com/watch?v=ZVq8nEHCKd4\">Watch it here</a>, and please pretend that you're impressed."
+		  },
+		  {
+		    "date": "2011-01-10",
+		    "title": "Moved to California",
+		    "imgurl": "false",
+		    "imgalt": "",
+		    "imgsize": "",
+		    "desc": "Blessed with both restless feet and an amazing friend (with a couch!) in Hollywood, I packed a single backpack and hopped a plane to LA. This simple, strange move kickstarted a year of transformation, laughter, and much debate over who in the hell had the spare keys."
+		  },
+		  {
+		    "date": "1987-12-25",
+		    "title": "A Christmas Baby!",
+		    "imgurl": "babby",
+		    "imgalt": "My mother holding a stocking-clad baby me in her lap.",
+		    "imgsize": 13,
+		    "desc": "In celebration of my sudden (and safe!) arrival, the doctors slid my tiny baby self into a Christmas stocking before handing me to my mother. 25 years later, this would come back to bite me in the ass."
+		  },
+		  {
+		    "date": "2016-10-01",
+		    "title": "Out with the Old, Etc.",
+		    "imgurl": "false",
+		    "imgalt": "",
+		    "imgsize": "",
+		    "desc": "The first website I ever built was an awkward Geocities thing, some neon temple of cheat codes and fanfiction splayed at the feet of Pokémon Blue. Two decades have passed, but I'm every bit as goofy as I was back then. The latest incarnation of mattmadeiro.com was built to reflect that, and to capture at least some of the excitement I felt back when the Internet—and its early Wild West interpretation of personal expression—was new."
+		  },
+		  {
+		    "date": "2015-09-07",
+		    "title": "The Northern Cascades",
+		    "imgurl": "cascades",
+		    "imgalt": "A winding path along the crest of the northern Cascade mountain range.",
+		    "imgsize": 68,
+		    "desc": "Take note: when a park ranger describes as 'grueling,' she's likely not joking around. Twelve miles round-trip yesterday were some of the most difficult of my life, but a fifteen-minute stretch of sunlight in the northern Cascades made the sharp ascent all the more worthwhile."
+		  },
+		  {
+		    "date": "2015-09-01",
+		    "title": "Olympic National Park",
+		    "imgurl": "olympic",
+		    "imgalt": "A photo of a lake inside Olympic National Park.",
+		    "imgsize": 80,
+		    "desc": "My first proper backcountry hike. I wish I could say that we brought water-proof gloves. I wish I could say that my brother brought a sleeping bag rated for freezing temps. I wish I could say that we didn't completely miss the side snake of a trail to our first camp site and spend a solid two hours wandering through a frozen, biting rain. I wish I could say that we were in any way remotely prepared for a several-day hike along the upper loop trail through Olympic National Park, but here's the truth: it hurt, it sucked, and I would so, so do it again."
+		  },
+		  {
+		    "date": "2015-01-21",
+		    "title": "Hello, Meshify!",
+		    "imgurl": "false",
+		    "imgalt": "",
+		    "imgsize": "",
+		    "desc": "I submitted the application in my boxers, not thinking I'd receive a phone call from one of the cofounders less than an hour later. He asked if I could come in for an interview. I mentioned I needed to put on pants, but agreed to come in. The rest, as they say, is history.<br/><br/>I'm not a conventional coder. My background is in Professional Writing, and I taught myself HTML, CSS, and Javascript for a simple reason: I'd grown tired of paying other people to build websites. Despite this, I have a natural affection for the fluid web, and my time at Meshify—nearly two years, at this time of writing—have only deepened my love for what is capable inside a browser. In my time here, I've spear-headed the design and development of a brand-new dashboard for the Meshify core product, and I've been tasked time and time again with adding new core features while still maintaining a simple and readable interface. I've learned a tremendous amount, and I'm grateful still that Meshify took a chance in giving me the reins of the front-facing portion of their offerings."
+		  },
+		  {
+		    "date": "2016-09-08",
+		    "title": "Colorado Calling",
+		    "imgurl": "rmnp",
+		    "imgalt": "Miller Lake, situated outside of Estes Park and just past the entrance to the RMNP.",
+		    "imgsize": 80,
+		    "desc": "Colorado! We stole a few days in Boulder, then a few more in Denver, but the memories linger far outside the city. My favorite moment from the trip might be the simplest: rising around 5am, moving through the darkness out past Estes Park and into the Rocky Mountains proper, then beginning a long, cold hike up to Mills Lake. We passed a half-dozen other hikers in those early hours, and our reward was an unobstructed view of one of the most gorgeous bodies of water I've ever seen. Let the record show that I love mountains more than almost anything."
+		  },
+		  {
+		    "date": "2016-12-28",
+		    "title": "Adios, Houston",
+		    "imgurl": "false",
+		    "imgalt": "",
+		    "imgsize": "",
+		    "desc": "It's been grand. My next chapter begins just a stone's throw down the interstate, in Austin, TX. I hear it has live music. I also hear it has good food. Most importantly, it has my job, a handful of old friends, and an opportunity to start anew."
+		  }
+		];
+
 		tag.setScroll = function(){
 			tag.output.scrollTop = tag.output.scrollHeight;
 		}
@@ -1025,9 +1318,9 @@
 			tag.update();
 		}
 
-		RiotControl.on('memories_list', function(memories){
-			var memories = _.orderBy(memories, 'date', 'desc');
-			tag.memoriesByYear = _.groupBy(memories, function(m){
+		tag.prepareMemories = function(){
+			var ordered = _.orderBy(memories, 'date', 'asc');
+			tag.memoriesByYear = _.groupBy(ordered, function(m){
 				return m.date.split('-')[0];
 			});
 			tag.memoryYears = _.sortBy(_.keys(tag.memoriesByYear), function(year){
@@ -1052,11 +1345,9 @@
 			});
 			tag.imageWeight = _.sum(weights);
 			tag.update();
-		});
+		}
 
-		tag.on('mount', function(){
-			RiotControl.trigger('memories_init');
-		});
+		tag.prepareMemories();
 
 	</script>
 
@@ -1104,7 +1395,7 @@
 	<script>
 
 		var tag = this;
-		tag.messages = [];
+		tag.messages = ["Hello, world. Type help for more information."];;
 		tag.commands = [];
 		tag.currentKeys = [];
 		tag.konamiKeys = [38,38,40,40,37,39,37,39,66,65];
@@ -1133,11 +1424,77 @@
 
 		tag.sendCommand = function(cmd) {
 			tag.currentKeys = [];
-			RiotControl.trigger('terminal_input', cmd);
+			tag.commands.push(cmd);
+			tag.checkCommand(cmd);
 		}
 
 		tag.clearMessages = function(){
-			RiotControl.trigger('terminal_clear');
+			tag.messages = [];
+			tag.update();
+		}
+
+		tag.checkCommand = function(cmd) {
+			// Cheater.
+			var result = "";
+			switch (cmd) {
+				case 'matt madeiro':
+					result = "That's me!";
+					break;
+				case 'xenia kulick':
+					result = "<3, princess.";
+					break;
+				case 'tyler owens':
+					result = "You silly bitch.";
+					break;
+				case 'elyse owens':
+					result = "SWEET TEA, MOTHER@#$#@!";
+					break;
+				case 'chelsea vincent':
+					result = "WE DON'T HAVE THE SPARE KEYS!";
+					break;
+				case 'will decker':
+					result = "Stupidly tall.";
+					break;
+				case 'jason cook':
+					result = "Stupid sexy Flanders.";
+					break;
+				case 'adam madeiro':
+					result = "Ah, yes. Mi hermano de Mexico.";
+					break;
+				case 'cheryle madeiro':
+					result = "The best woman I know.";
+					break;
+				case 'john madeiro':
+					result = "A goddamn rockstar and a great father.";
+					break;
+				case 'maggie doyne':
+					result = "The most caring person I know, and a genuine inspiration.";
+					break;
+				case 'david crandall':
+					result = "YOU'RE A UNICORN, HARRY";
+					break;
+				case 'help':
+					result = "Type things! All sorts of things. Some things will say funny things, and others will do funny things. Here's something decidedly unfunny, but still useful: type and enter 'clear' (sans quotes) to wipe this display clean.";
+					break;
+				case 'ls':
+					result = "Writing.exe Tools.exe Terminal.exe GuestBook.exe Library.exe Contact.exe Favorites.exe MysteriousFolder";
+					break;
+				case 'pwd':
+					result = '/MadeirOS/users/guest/home';
+					break;
+				case 'cd mysteriousfolder':
+					result = "Nothing in here...yet.";
+					break;
+				// Functions
+				case 'clear':
+					tag.clearMessages();
+					result = '';
+					break;
+				default:
+					result = "$ " + cmd + ": command not found";
+					break;
+			}
+			tag.messages.push(result);
 		}
 
 		tag.checkKonami = function(e) {
@@ -1154,7 +1511,7 @@
 		}
 
 		tag.konami = function(){
-			RiotControl.trigger('terminal_msg', "Oh, you.");
+			tag.messages.push("Oh, you.");
 			tag.refs.cmd.value = "";
 		}
 
@@ -1178,26 +1535,6 @@
 				tag.refs.cmd.value = typeof tag.commands[tag.currentCommand] != 'undefined' ? tag.commands[tag.currentCommand] : "";
 			}
 		}
-
-		RiotControl.on('terminal_command', function(f){
-			tag[f]();
-			if(tag.isMounted) {
-				tag.update();
-			}
-		});
-
-		RiotControl.on('terminal_list', function(messages){
-			tag.messages = messages;
-			if(tag.isMounted) {
-				tag.update();
-			}
-		});
-
-		tag.on('mount', function(){
-			tag.refs.cmd.focus();
-			RiotControl.trigger('terminal_init');
-			tag.update();
-		});
 
 	</script>
 
@@ -1225,16 +1562,14 @@
 	<script>
 
 		var tag = this;
-		tag.tools = [];
-
-		RiotControl.on('tools_list', function(tools){
-			tag.tools = tools;
-			tag.update();
-		});
-
-		tag.on('mount', function(){
-			RiotControl.trigger('tools_init');
-		});
+		tag.tools = [
+		  {
+		    "title": "CSV.me",
+		    "desc": "A small (and simple!) in-browser CSV editor.",
+		    "tech": "Riot.js, Tachyons",
+		    "link": "http://mattmadeiro.com/csvme"
+		  }
+		];
 
 	</script>
 
@@ -1266,39 +1601,145 @@
 
 	<script>
 
-		var self = this;
-		this.articles = [];
-		this.articleYears = [];
-		this.articlesByYear = {};
-		this.monthNames = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+		var tag = this;
+		tag.articles = [];
+		tag.articleYears = [];
+		tag.articlesByYear = {};
+		tag.monthNames = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+		var articles = [
+		  {
+		    "title": "Why I Don't Read Health Blogs Anymore",
+		    "date": "2015-01-15",
+		    "slug": "health",
+		    "category": "none"
+		  },
+		  {
+		    "title": "How to Live a Life Without Fear",
+		    "date": "2014-07-31",
+		    "slug": "fear",
+		    "category": "The Bigger Picture"
+		  },
+		  {
+		    "title": "The Last Stop on the Road",
+		    "date": "2014-04-23",
+		    "slug": "last-stop",
+		    "category": "The Bigger Picture"
+		  },
+		  {
+		    "title": "10 Truths I Hope I Never Forget",
+		    "date": "2013-09-09",
+		    "slug": "10-truths",
+		    "category": "The Bigger Picture"
+		  },
+		  {
+		    "title": "The Secrets of an Endless Optimist",
+		    "date": "2012-07-05",
+		    "slug": "optimist",
+		    "category": "The Bigger Picture"
+		  },
+		  {
+		    "title": "The One Question That Everyone Asks",
+		    "date": "2014-06-10",
+		    "slug": "one-question",
+		    "category": "The Big Damn Trip"
+		  },
+		  {
+		    "title": "Life Lessons From a Stick of Seaweed",
+		    "date": "2013-08-01",
+		    "slug": "seaweed",
+		    "category": "The Big Damn Trip"
+		  },
+		  {
+		    "title": "To the Guy Who Stole My iPod",
+		    "date": "2013-08-22",
+		    "slug": "ipod",
+		    "category": "Lessons Hard Learned"
+		  },
+		  {
+		    "title": "Am I Ready for This?",
+		    "date": "2013-04-13",
+		    "slug": "ready",
+		    "category": "Lessons Hard Learned"
+		  },
+		  {
+		    "title": "You Pack Your Own Bags",
+		    "date": "2013-12-05",
+		    "slug": "bags",
+		    "category": "The Blue Period"
+		  },
+		  {
+		    "title": "A Few Thoughts on Dying",
+		    "date": "2013-09-14",
+		    "slug": "dying",
+		    "category": "The Blue Period"
+		  },
+		  {
+		    "title": "Why I Might Actually be a Phony",
+		    "date": "2013-05-17",
+		    "slug": "phony",
+		    "category": "The Blue Period"
+		  },
+		  {
+		    "title": "I Met My Brother in Mexico",
+		    "date": "2014-07-01",
+		    "slug": "mexico",
+		    "category": "All in the Family"
+		  },
+		  {
+		    "title": "To My Father",
+		    "date": "2013-06-07",
+		    "slug": "father",
+		    "category": "All in the Family"
+		  },
+		  {
+		    "title": "To My Mother",
+		    "date": "2013-05-12",
+		    "slug": "mother",
+		    "category": "All in the Family"
+		  },
+		  {
+		    "title": "What I Wish I'd Known Before Going to College",
+		    "date": "2013-10-30",
+		    "slug": "college",
+		    "category": "The Days of My Youth"
+		  },
+		  {
+		    "title": "8,000 Miles From Who I Used to Be",
+		    "date": "2013-07-08",
+		    "slug": "miles",
+		    "category": "The Days of My Youth"
+		  },
+		  {
+		    "title": "How to Act Like a Kid Again",
+		    "date": "2012-07-18",
+		    "slug": "kid",
+		    "category": "The Days of My Youth"
+		  }
+		];
 
-		this.calculateHeight = function(){
+		tag.calculateHeight = function(){
 			return 500;
 		}
 
-		this.setScroll = function(){
-			this.output.scrollTop = this.output.scrollHeight;
+		tag.setScroll = function(){
+			tag.output.scrollTop = tag.output.scrollHeight;
 		}
 
-		this.formatDate = function(date) {
-			return this.monthNames[new Date(date).getMonth()];
+		tag.formatDate = function(date) {
+			return tag.monthNames[new Date(date).getMonth()];
 		}
 
-		RiotControl.on('writing_list', function(articles){
-			self.articles = _.orderBy(articles, 'date', 'desc');
-			self.articlesByYear = _.groupBy(self.articles, function(a){
+		tag.prepareArticles = function(){
+			tag.articles = _.orderBy(articles, 'date', 'desc');
+			tag.articlesByYear = _.groupBy(tag.articles, function(a){
 				return a.date.split('-')[0];
 			});
-			self.articleYears = _.sortBy(_.keys(self.articlesByYear), function(year){
+			tag.articleYears = _.sortBy(_.keys(tag.articlesByYear), function(year){
 				return -1 * parseInt(year);
 			});
-			console.log(self.articlesByYear);
-			self.update();
-		});
+		}
 
-		this.on('mount', function(){
-			RiotControl.trigger('writing_init');
-		});
+		tag.prepareArticles();
 
 	</script>
 

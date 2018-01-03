@@ -84,10 +84,10 @@
 				var payload = {
 					name: tag.escapeInput(tag.refs.author.value),
 					location: tag.escapeInput(tag.refs.location.value),
-					msg: tag.escapeInput(tag.refs.message.value),
+					message: tag.escapeInput(tag.refs.message.value),
 					color: tag.authorColor
 				}
-				RiotControl.trigger('guestbook_add', payload);
+				firebase.database().ref('guestbook').push().set(payload);
 				tag.refs.author.value = '';
 				tag.refs.location.value = '';
 				tag.refs.message.value = '';
@@ -119,15 +119,12 @@
 			e.stopPropagation();
 		}
 
-		RiotControl.on('guestbook_list', function(entries){
-			tag.messages = entries;
-			if(tag.isMounted) {
-				tag.update();
-			}
-		});
-
 		tag.on('mount', function(){
-			RiotControl.trigger('guestbook_init');
+			firebase.database().ref('guestbook').on('value', function(snapshot) {
+			  var entries = snapshot.val();
+			  tag.messages = _.isNull(entries) ? [] : _.values(entries);
+			  tag.update();
+			});
 		});
 
 	</script>

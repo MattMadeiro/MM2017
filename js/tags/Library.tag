@@ -20,21 +20,57 @@
 
 	<script>
 
-		var self = this;
-		this.books = [];
-
-		this.setScroll = function(){
-			this.output.scrollTop = this.output.scrollHeight;
-		}
-
-		RiotControl.on('library_list', function(books){
-			self.books = books;
-			self.update();
-		});
-
-		this.on('mount', function(){
-			RiotControl.trigger('library_init');
-		});
+		var tag = this;
+		tag.books = [
+		  {
+		    "name": "Bird by Bird",
+		    "author": "Anne Lamott",
+		    "amazon": "http://amzn.to/2dlfw83",
+		    "filename": "birdbybird"
+		  },
+		  {
+		    "name": "City of Saints and Madmen",
+		    "author": "Jeff VanderMeer",
+		    "amazon": "http://amzn.to/2dCzNbb",
+		    "filename": "cityofsaints"
+		  },
+		  {
+		    "name": "Letters of Note",
+		    "author": "Shaun Usher",
+		    "amazon": "http://amzn.to/2cLgRpL",
+		    "filename": "lettersofnote"
+		  },
+		  {
+		    "name": "Name of the Wind",
+		    "author": "Patrick Rothfuss",
+		    "amazon": "http://amzn.to/2dlfgWC",
+		    "filename": "nameofthewind"
+		  },
+		  {
+		    "name": "Show Your Work",
+		    "author": "Austin Kleon",
+		    "amazon": "http://amzn.to/2d7h6Hv",
+		    "filename": "showyourwork"
+		  },
+		  {
+		    "name": "Steal Like an Artist",
+		    "author": "Austin Kleon",
+		    "amazon": "http://amzn.to/2dlgyRf",
+		    "filename": "steal"
+		  },
+		  {
+		    "name": "Vagabonding",
+		    "author": "Rolf Potts",
+		    "amazon": "http://amzn.to/2dCzTQh",
+		    "filename": "vagabonding"
+		  },
+		  {
+		    "name": "The Shape of Design",
+		    "author": "Frank Chimero",
+		    "amazon": "http://shapeofdesignbook.com/",
+		    "filename": "chimero"
+		  }
+		];
 
 	</script>
 
