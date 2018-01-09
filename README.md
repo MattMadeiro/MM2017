@@ -1,4 +1,4 @@
-# MM2017
+# MadeirOS
 ![The pseudo-desktop design of MattMadeiro.com.](/mm2017.jpg?raw=true)
 
 I cut my teeth on Geocities. Early websites were weird, loud, and dense, shocks of color so dang *sincere* that I still feel charmed long after they ceased to exist. My own page meddled in the world of Pokémon cheat codes. (That probably says all you need to know about me.) The 2016-2017 edition of [mattmadeiro.com](http://mattmadeiro.com) is a throwback to those days of wonder, when the World Wide Web felt very personal, very intimate, and still small enough to understand.
